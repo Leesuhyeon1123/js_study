@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../operator"
+		},
+		{
+			"path": "../variable"
+		}
+	]
+}
