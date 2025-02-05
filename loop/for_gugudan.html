@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for문 구구단 예제</title>
+  </head>
+  <style>
+    .gugu {
+      display: inline-block;
+      background-color: antiquewhite;
+      margin-left: 20px;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <script>
+      for (let i = 2; i <= 9; i++) {
+        document.write(`<div class="gugu">`);
+        document.write(`<h3> ${i}단 </h3> `);
+        for (let j = 1; j <= 9; j++) {
+          // console.log(j);
+          document.write(`${i} x ${j} =${i * j}<br>`);
+        }
+        document.write(`</div>`);
+        // 멈추는 break문 (ex: 3단일때 멈추기)
+        if(i === 3) break;
+      }
+    </script>
+  </body>
+</html>

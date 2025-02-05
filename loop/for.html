@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for문</title>
+  </head>
+  <body>
+    <script>
+      // console.log("안녕하세요");
+      // console.log("안녕하세요");
+      // console.log("안녕하세요");
+      // console.log("안녕하세요");
+      // console.log("안녕하세요");
+
+      //   for (let i = 0; i < 5; i++) {
+      //     console.log("안녕하세요");
+      //   }
+
+      let i;
+      let num = 0;
+      for (let i = 1; i < 101; i++) {
+        // console.log(i);
+        num += i;
+      }
+      document.write(`1부터 100까지 더한 합은 ${num} `);
+
+      // 0부터 10까지 출력해주세요
+      for (let i = 0; i <= 10; i++) {
+        console.log(i);
+        document.write(`${i}<br>`);
+      }
+      // 웹 퍼블리셔가 되자!!! 3번 출력해주세요.
+      for (let i = 1; i <= 3; i++) {
+        document.write("웹 퍼블리셔가 되자!!! <br>");
+      }
+      //   for문 안에 for문 넣기 ('*'30개 10번씩 줄바꿈하기)
+      for (let i = 0; i <= 9; i++) {
+        for (let i = 0; i < 30; i++) {
+          document.write(`*`);
+        }
+        document.write(`<br>`);
+      }
+      //   구구단 2단 출력
+      for (let i = 1; i <= 9; i++) {
+        // console.log(i);
+        document.write(`2 x ${i} = ${2 * i}<br>`);
+      }
+      //   for문 안에 for문 넣기 ('*'30개 10번씩 줄바꿈하기)
+      for (let i = 0; i <= 10; i++) {
+        document.write(`-`);
+      }
+
+      // 구구단 5단 출력
+      for (let i = 1; i <= 9; i++) {
+        // console.log(i);
+        document.write(`5 x ${i} = ${5 * i} <br>`);
+      }
+    </script>
+  </body>
+</html>
