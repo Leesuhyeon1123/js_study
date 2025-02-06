@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- 함수 재 사용하기-->
+    <button onclick="greeting('하경미')">클릭</button>
+    <button onclick="greeting('김진희')">안녕</button>
+    <script>
+      // greeting = 함수명
+      function greeting(name) {
+        //name = 매게변수 ("인수"를 받아오고싶어서 쓰는것)
+        // alert("안녕") //확인 팝업창
+        // alert(`안녕하세요 ${name}`)
+        let massage1 = `안녕하세요 ${name}`; //안녕하세요 "name" 를 똑같이 사용하기
+        alert(massage1);
+        // massage1 = 변수명
+      }
+
+      let message = greeting("이수현"); //함수명에다가 "인수"를 넣었음
+      //   greeting("이수현")
+      //   document.write(`${message}`);
+    </script>
+  </body>
+</html>

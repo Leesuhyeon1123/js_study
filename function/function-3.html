@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>이미지 슬라이더</title>
+  </head>
+
+  <style>
+    .slider {
+      width: 30%;
+    }
+    .slider img {
+      width: 100%;
+    }
+  </style>
+
+  <body>
+    <div class="slider">
+      <img src="images/KakaoTalk_20250206_121558644.jpg" alt="이미지1" />
+      <img src="images/KakaoTalk_20250206_121558644_01.jpg" alt="이미지2" style="display: none" />
+      <img src="images/KakaoTalk_20250206_121558644_02.jpg" alt="이미지3" style="display: none" />
+    </div>
+
+    <script>
+      // 이미지 슬라이더
+      let currentIndex = 0;
+      // 한개가아닌 여러개를 불러올시 'querySelectorAll'을 쓴다
+      const images = document.querySelectorAll(".slider img");
+
+      // 슬라이드 함수 만들어주기
+      function showSlideImage() {
+        // 현재 보이는 이미지1 숨김처리 :
+        // images에 crrentIndex 0 번호 부여
+        images[currentIndex].style.display = "none";
+        // 다음 이미지 인덱스로 변경(마지막 이미지를 넘으면 0으로 돌아오게하기)
+        // currentIndex 0 + 1 = 1이 찍히고 나누기(%) 이미지안에
+        currentIndex = (currentIndex + 1) % images.length;
+        // 다음 이미지를 보이게함
+        images[currentIndex].style.display = "block";
+
+        // console.log(currentIndx);
+      }
+      // showSlideImage(); //이걸 쓰면 안움직임 그래서,
+      setInterval(showSlideImage, 1000); // 1000 = 1초
+    </script>
+  </body>
+</html>

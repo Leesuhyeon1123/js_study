@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>let 변수 알아보기</title>
+  </head>
+
+  <body>
+    <script>
+      function calcSum(n) {
+        // console.log(n);
+        let sum = 0;
+
+        // 함수 안, 변수 밑에 적어야 인식함
+        console.log(sum);
+      }
+
+      calcSum(120);
+
+      function displayNum() {
+        let x = 30;
+        console.log(x);
+      }
+      displayNum();
+
+      function appNum() {
+        var y;
+        y = 20;
+        console.log(y);
+      }
+      appNum();
+
+      function bbNum() {
+        let c;
+        c = 100;
+        console.log(c);
+      }
+      bbNum();
+
+      // 매개변수가 없는경우
+      // h1 변수에다가 함수식을 담아놓음
+      const h1 = function () {
+        return "안녕하세요!";
+      };
+      console.log(h1);
+
+    </script>
+  </body>
+</html>

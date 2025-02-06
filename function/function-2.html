@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>함수</title>
+  </head>
+
+  <style>
+    #menu {
+      display: none;
+    }
+    #menu.open {
+      display: block;
+    }
+  </style>
+
+  <body>
+    <!-- 함수명 : toggleMenu -->
+    <button class="toggleMenu">메뉴 열기/닫기</button>
+
+    <nav id="menu">
+      <ul>
+        <li>홈</li>
+        <li>서비스</li>
+        <li>연락처</li>
+      </ul>
+    </nav>
+
+    <!-- 배경색 변경 -->
+    <!-- red,orange,yellow 가 '인수' -->
+    <button onclick="changeColor('red')">배경색 red 변경</button>
+    <button onclick="changeColor('orange')">배경색 orange 변경</button>
+    <button onclick="changeColor('yellow')">배경색 yellow 변경</button>
+
+    
+
+    <script>
+      // 토글메뉴
+      let toggleMenu = document.querySelector(".toggleMenu");
+      let menu = document.querySelector("#menu");
+
+      toggleMenu.addEventListener("click", function () {
+        menu.classList.toggle("open"); // 열렸다 닫혔다 : toggle
+      });
+
+      function toggleMenu() {
+        menu.classList.toggle("open");
+      }
+      toggleMent.addEventListener("click", toggleMenu);
+
+      // 배경색 변경 = 함수 실행
+      // changeColor = 함수값 , color = 매개변수
+      function changeColor(color) {
+        // alert("클릭"); // 함수 실행 확인
+        // document.body.style.backgroundColor = color;
+        if (document.body.style.backgroundColor === color) {
+          document.body.style.backgroundColor = "";
+        } else {
+          document.body.style.backgroundColor = color;
+        }
+      }
+    </script>
+  </body>
+</html>
