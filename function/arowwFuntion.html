@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>화살표 함수</title>
+  </head>
+  <body>
+    <script>
+      // 기본함수
+      //   function add(a, b) {
+      //     return a + b;
+      //   }
+      // 화살표 함수 변경
+      //  = {}(중괄호) 와 return 생략가능 (한줄일때)
+      const add = (a, b) => a + b;
+
+      // ---------------------------------------
+      // 1.매개변수가 하나일때
+      // 함수명 : square, (x,y) : 매개변수
+      //  x * y * c : 식의 결과값(명령)
+      // (20, 2, 3) : 인수
+      const square = (x, y, c) => x * y * c;
+      console.log(square(20, 2, 3)); // 함수명 불러오기
+
+      // ---------------------------------------
+      // 2.매개변수가 여러줄일때
+      // greet 함수 name 매개변수
+      // 여러줄일때는 {} 안에서 작성
+      const greet = (name) => {
+        // 어떤행동을 할지 작성
+        return `안녕 , ${name} `;
+        // undefined 뜨면 결과값 반환으로 '앞에 return 작성'
+      };
+      console.log(greet("이수현"));
+    </script>
+  </body>
+</html>
