@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array(배열) 객체</title>
+  </head>
+  <body>
+    <h1>JavaScript Array 객체 주요 속성과 메서드</h1>
+    <script>
+      const arr = [1, 2, 3, 4, 5];
+      console.log(arr);
+
+      // 1.length 속성
+      console.log(`length: ${arr.length}`); //5
+
+      // 2.push() : 배열 끝에 요소를 추가하는 메서드
+      arr.push(6);
+      console.log(`push: ${arr}`); //push: 1,2,3,4,5,6
+
+      // 3.pop() : 배열 마지막 요소 제거
+      arr.pop();
+      console.log(`pop: ${arr}`); //pop: 1,2,3,4,5
+
+      // 4.shift() : 배열 첫 번째 요소 제거
+      arr.shift();
+      console.log(`shift: ${arr}`); //shift: 2,3,4,5
+
+      //5.unshift() : 배열 앞에 값 추가
+      arr.unshift(96);
+      console.log(`unshift: ${arr}`); //unshift: 96,2,3,4,5
+
+      // 6.indexOf() : 특정 값의 인덱스 찾기
+      console.log(`indexOf 3: ${arr.indexOf(3)}`); //2
+
+      // 7.slice() : 배열의 일부를 반환
+      console.log(`slice : ${arr.slice(1, 4)}`); //slice : 2,3,4
+
+      // 8.splice() : 배열 요소 추가 / 삭제
+      // splice(시작인덱스, 삭제할 갯수, 추가할 요소)
+      arr.splice(2, 1, 99);
+      console.log(`splice : ${arr}`); //splice : 96,2,99,4,5
+
+      //   9.join() : 배열을 문자로 변환
+      console.log(`join : ${arr.join("==")}`);
+      // join : 96==2==99==4==5
+
+      //   10.forEach() : 각 요소에 대해 함수 실행
+    //   비파괴적 메서드
+      arr.forEach(function (item) {
+        console.log(`forEach: ${item}`);
+      });
+      //   forEach: 96,2,99,4,5
+    </script>
+  </body>
+</html>
